@@ -13,7 +13,7 @@ study_hours = st.number_input("Study hours", min_value=0.0, step=0.5)
 
 st.write("Enter attendance to predict the result.")
 
-attendance = st.number_input("Attendance", min_value=0.0, step=5)
+attendance = st.number_input("Attendance", min_value=0.0, step=1)
 
 if st.button("Predict"):
 	input_data = pd.DataFrame({"StudyHours": [study_hours],"Attendance": [attendance]})
