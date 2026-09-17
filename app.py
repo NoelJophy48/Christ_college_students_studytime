@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
-model_path = Path(__file__).parent / "logistic_regression_model.pkl"
+model_path = Path(__file__).parent / "logistic_regression_model(1).pkl"
 model = joblib.load(model_path)
 
 st.title("Student Pass Predictor")
