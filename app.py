@@ -16,7 +16,7 @@ st.write("Enter attendance to predict the result.")
 attendance = st.number_input("Attendance", min_value=0.0, step=5)
 
 if st.button("Predict"):
-	input_data = pd.DataFrame({"StudyHours": [study_hours],"Attendance": [attendance})
+	input_data = pd.DataFrame({"StudyHours": [study_hours],"Attendance": [attendance]})
 	prediction = model.predict(input_data)[0]
 	probability = model.predict_proba(input_data)[0][int(prediction)]
 
