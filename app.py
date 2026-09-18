@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
-model_path = Path(__file__).parent / "Electric_Bill.pkl"
+model_path = Path(__file__).parent / "Electric_Bill_fan.pkl"
 poly,model = joblib.load(model_path)
 
 st.title("AC Units")
