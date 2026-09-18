@@ -9,10 +9,14 @@ poly,model = joblib.load(model_path)
 st.title("AC Units")
 st.write("Enter the AC units to predict the bill.")
 
+st.title("Fan Units")
+st.write("Enter the Fan units to predict the bill.")
+
 ac_units = st.number_input("AC_Units", min_value=0.0, step=0.5)
+fan_units = st.number_input("Fan_Units", min_value=0.0, step=0.5)
 
 if st.button("Predict"):
-	input_data = pd.DataFrame({"AC_Units": [ac_units]})
+	input_data = pd.DataFrame({"AC_Units": [ac_units],"Fan_Units": [fan_units]})
 	input_data_poly = poly.transform(input_data)
 	prediction = model.predict(input_data_poly)[0]
 
