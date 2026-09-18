@@ -6,11 +6,9 @@ from pathlib import Path
 model_path = Path(__file__).parent / "Electric_Bill_fan.pkl"
 poly,model = joblib.load(model_path)
 
-st.title("AC Units")
-st.write("Enter the AC units to predict the bill.")
+st.title("Electricity bill predictor")
+st.write("Enter the AC and Fan units to predict the bill.")
 
-st.title("Fan Units")
-st.write("Enter the Fan units to predict the bill.")
 
 ac_units = st.number_input("AC_Units", min_value=0.0, step=0.5)
 fan_units = st.number_input("Fan_Units", min_value=0.0, step=0.5)
